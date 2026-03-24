@@ -96,6 +96,13 @@ const teamGrid = document.getElementById('team-grid');
 const teamDots = document.getElementById('team-dots');
 
 if (teamGrid && teamDots && window.innerWidth <= 600) {
+  const swipeHint = document.getElementById('team-swipe-hint');
+  if (swipeHint) {
+    teamGrid.addEventListener('scroll', () => {
+      swipeHint.classList.add('hidden');
+    }, { passive: true, once: true });
+    setTimeout(() => swipeHint.classList.add('hidden'), 6000);
+  }
   const cards = teamGrid.querySelectorAll('.team-card');
 
   cards.forEach((_, i) => {

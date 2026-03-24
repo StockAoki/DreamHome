@@ -111,18 +111,47 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 0 4rem;
+  padding: 0 6rem;
+  background: #080808;
 }
 .hero-video-wrap {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
-.hero-video-wrap video {
+.hero-vid {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+/* Desktop: landscape centrado | Mobile: portrait enfocado arriba */
+.hero-vid--desktop {
+  object-position: center center;
+  display: block;
+}
+.hero-vid--mobile {
+  object-position: center top;
+  display: none;
+}
+@media (max-width: 900px) {
+  .hero-vid--desktop { display: none; }
+  .hero-vid--mobile  { display: block; }
+}
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to right, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.6) 45%, rgba(8,8,8,0.2) 100%),
+    linear-gradient(to top, rgba(8,8,8,0.5) 0%, transparent 50%);
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 620px;
 }
 .hero-video-placeholder {
   width: 100%;
@@ -183,25 +212,15 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: 2;
-  background: radial-gradient(ellipse at 20% 50%, rgba(200,169,110,0.06) 0%, transparent 55%);
+  z-index: 1;
+  background: radial-gradient(ellipse at 20% 50%, rgba(200,169,110,0.05) 0%, transparent 55%);
+  pointer-events: none;
 }
 .hero-lines {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 80px,
-    rgba(255,255,255,0.012) 80px,
-    rgba(255,255,255,0.012) 81px
-  );
-}
-.hero-content {
-  position: relative;
-  z-index: 3;
-  max-width: 700px;
+  pointer-events: none;
 }
 .hero-eyebrow {
   font-size: 0.65rem;
@@ -215,7 +234,7 @@ body {
 }
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-size: clamp(3.5rem, 5.5vw, 8rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -277,13 +296,13 @@ body {
 }
 .hero-logo-float {
   position: absolute;
-  right: 8%; top: 50%;
+  left: 4%; top: 50%;
   transform: translateY(-50%);
-  width: clamp(280px, 30vw, 420px);
-  opacity: 0.06;
+  width: clamp(320px, 38vw, 500px);
+  opacity: 0.04;
   animation: slowSpin 60s linear infinite, fadeIn 1.5s 1s forwards;
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
 }
 .hero-scroll {
   position: absolute;
@@ -529,6 +548,7 @@ section { padding: 7rem 4rem; }
 /* ── EQUIPO ────────────────────────────────────────────── */
 #equipo { background: var(--light-gray); }
 .team-dots { display: none; }
+.team-swipe-hint { display: none; }
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1065,6 +1085,23 @@ footer {
   .footer-book-btn { align-self: center; }
 }
 @media (max-width: 600px) {
+  /* Hero mobile */
+  #hero { padding: 0 1.5rem; }
+  .hero-content {
+    padding-bottom: 5rem;
+    max-width: 100%;
+  }
+  .btn-primary {
+    white-space: nowrap;
+    padding: 1rem 1.8rem;
+    font-size: 0.65rem;
+  }
+  .btn-secondary::before { display: none; }
+  .hero-video-overlay {
+    background:
+      linear-gradient(to right, rgba(10,10,10,0.75) 0%, rgba(10,10,10,0.35) 100%),
+      linear-gradient(to top, rgba(10,10,10,0.6) 0%, transparent 55%);
+  }
   .hero-title { font-size: 3rem; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item { aspect-ratio: 4/3; }
@@ -1106,6 +1143,30 @@ footer {
   .team-dot.active {
     background: var(--accent);
     transform: scale(1.3);
+  }
+  .team-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    animation: swipeHintPulse 1.5s ease-in-out infinite, swipeHintFade 3s ease forwards 3s;
+  }
+  .team-swipe-hint svg {
+    animation: swipeArrow 1.5s ease-in-out infinite;
+  }
+  .team-swipe-hint.hidden { display: none; }
+
+  @keyframes swipeArrow {
+    0%, 100% { transform: translateX(0); }
+    50%       { transform: translateX(5px); }
+  }
+  @keyframes swipeHintFade {
+    to { opacity: 0; pointer-events: none; }
   }
   #reservar { padding: 5rem 2rem; }
   .hero-video-wrap video { object-position: center; }
