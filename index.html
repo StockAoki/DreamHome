@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Home — Barbería & Social Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <img src="img/logo.png" alt="Dream Home Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#reservar" class="nav-cta">Reservar</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-panel">
+    
+    <div class="mobile-header">
+      <img src="img/logo.png" alt="Dream Home" class="mobile-logo" />
+      <button class="menu-close" id="menu-close">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="menu-movil-enlaces">
+      <a href="#servicios" class="mobile-link">Servicios</a>
+      <a href="#galeria" class="mobile-link">Galería</a>
+      <a href="#equipo" class="mobile-link">Equipo</a>
+      <a href="#resenas" class="mobile-link">Reseñas</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+    </div>
+
+    <div class="mobile-footer">
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="btn-primary mobile-reserve">
+        Reservar cita
+      </a>
+
+      <div class="mobile-socials">
+        <a href="https://instagram.com/dreamhome_dhcr/" target="_blank" class="mobile-social-btn" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/50687183932" target="_blank" class="mobile-social-btn" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/dreamhomedhcr/" target="_blank" class="mobile-social-btn" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-video-wrap">
+      <div class="hero-video-placeholder">
+        <div class="placeholder-label">
+
+          <video autoplay muted loop playsinline>
+  <source src="heroe.mp4" type="video/mp4" />
+</video>
+        </div>
+      </div>
+    </div>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+    <img src="logo.png" alt="" class="hero-logo-float" />
+    <div class="hero-content">
+      <p class="hero-eyebrow">Barbería &amp; Social Club</p>
+      <h1 class="hero-title">Dream<br/><em>Home.</em></h1>
+      <p class="hero-sub">Porque un buen corte no solo se ve bien,
+<br/>se siente bien y se adapta a vos.</p>
+      <div class="hero-actions">
+        <a href="#reservar" class="btn-primary">Reservar cita</a>
+        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <p class="section-label reveal">Lo que ofrecemos</p>
+    <h2 class="section-title reveal">Servicios &amp;<br/><em>Precios</em></h2>
+    <div class="divider reveal"></div>
+
+    <div class="menu-wrap">
+
+      <!-- Columna izquierda: Premium -->
+      <div class="menu-col reveal">
+        <div class="menu-col-header">
+          <span class="menu-col-tag premium">Premium</span>
+          <h3 class="menu-col-title">Experiencias<br/><em>Premium</em></h3>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">
+              Corte Cabello y Barba
+              <span class="menu-badge">Popular</span>
+            </div>
+            <div class="menu-item-desc">Corte a gusto, perfilado de barba, toalla caliente y fría, loción aftershave, aceite hidratante, lavado, vapor de ozono, masajeador facial y bebida de cortesía</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;11,500</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Recorte de Barba</div>
+            <div class="menu-item-desc">Perfilado de barba, toalla caliente y fría, loción aftershave, aceite hidratante, vapor de ozono, masajeador facial y bebida de cortesía</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;7,500</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Limpieza Facial</div>
+            <div class="menu-item-desc">Aplicación de mascarillas, extracción de puntos negros, exfoliante e hidratación profunda</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;8,500</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Manicura Masculina</div>
+            <div class="menu-item-desc">Tratamiento de uñas, cutícula, limpieza y exfoliación de manos</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;8,500</div>
+        </div>
+
+      </div>
+
+      <!-- Separador vertical -->
+      <div class="menu-divider reveal"></div>
+
+      <!-- Columna derecha: Básicos -->
+      <div class="menu-col reveal">
+        <div class="menu-col-header">
+          <span class="menu-col-tag">Básicos</span>
+          <h3 class="menu-col-title">Servicios<br/><em>Básicos</em></h3>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Corte de Cabello</div>
+            <div class="menu-item-desc">Corte a gusto, aplicación de producto y acabado profesional</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;7,500</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Depilación Nasal o Oídos</div>
+            <div class="menu-item-desc">Depilación solo nasal o solo de oídos</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;3,500</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Depilación Nasal y de Oídos</div>
+            <div class="menu-item-desc">Aplica para ambas depilaciones: nariz y oídos</div>
+          </div>
+          <div class="menu-item-dots"></div>
+          <div class="menu-item-price">&#8353;5,000</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA bajo el menú -->
+    <div class="menu-cta reveal">
+      <p>¿Listo para tu experiencia Dream Home?</p>
+      <a href="#reservar" class="btn-primary">Reservar cita</a>
+    </div>
+
+  </section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <p class="section-label reveal">Nuestro trabajo</p>
+  <h2 class="section-title reveal">La <em>Galería</em></h2>
+  <div class="divider reveal"></div>
+  <div class="gallery-grid reveal">
+
+    <div class="gallery-item">
+            <video autoplay muted loop playsinline>
+  <source src="ServicioVideo.mp4" type="video/mp4" />
+</video>
+      <div class="gallery-overlay"><span>Ver más</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/Fabi.PNG" alt="Trabajo 2" />
+      <div class="gallery-overlay"><span>Ver más</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/CorteCarlos.png" alt="Trabajo 3" />
+      <div class="gallery-overlay"><span>Ver más</span></div>
+    </div>
+
+    <div class="gallery-item">
+ 
+      <img src="img/corte.jpg" alt="Trabajo 1" />
+      <div class="gallery-overlay"><span>Ver más</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/servicio.jpg" alt="Trabajo 5" />
+      <div class="gallery-overlay"><span>Ver más</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo">
+  <p class="section-label reveal">Quiénes somos</p>
+  <h2 class="section-title reveal">El <em>Equipo</em></h2>
+  <div class="divider reveal"></div>
+  <div class="team-grid" id="team-grid">
+
+    <div class="team-card reveal reveal-delay-1">
+      <img src="img/Carlos.jpg" alt="Carlos Quesada" class="team-photo" />
+      <div class="team-info">
+        <div class="team-role">Barbero — Fundador</div>
+        <div class="team-name">Carlos Quesada</div>
+        <div class="team-specialty">Especialista en cortes clásicos y diseños de barba de alta precisión. Más de 10 años en el oficio.</div>
+      </div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-2">
+      <img src="img/Alfredo.jpg" alt="Jose Alfredo" class="team-photo" />
+      <div class="team-info">
+        <div class="team-role">Barbero</div>
+        <div class="team-name">Jose Alfredo</div>
+        <div class="team-specialty">Nueva generación del Dream Home. Fresco, creativo y con un ojo único para las tendencias actuales.</div>
+      </div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-3">
+      <img src="img/Fabiana.png" alt="Fabiana Serrano" class="team-photo" />
+      <div class="team-info">
+        <div class="team-role">Estética & Atención al Cliente</div>
+        <div class="team-name">Fabiana Serrano</div>
+        <div class="team-specialty">El corazón del Dream Home. Especialista en manicura, limpiezas faciales y depilación.</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="team-dots" id="team-dots"></div>
+</section>
+
+  <!-- RESEÑAS -->
+  <section id="resenas">
+    <p class="section-label reveal">Lo que dicen</p>
+    <h2 class="section-title reveal">Reseñas de<br/><em>Clientes</em></h2>
+    <div class="divider reveal"></div>
+    <div class="reviews-carousel" id="reviews-carousel">
+      <div class="reviews-track" id="reviews-track">
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">El mejor lugar para un afeitado clásico en la zona. Carlos tiene manos de artista, y el ambiente del local es únicamente premium.</p>
+          <div class="review-author">— Miguel Ángel T.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Llevo dos años viniendo y nunca me han fallado. El combo VIP vale cada colón. Te vas sintiéndote nuevo, en serio.</p>
+          <div class="review-author">— Rodrigo S.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">No es solo una barbería, es un espacio donde te tomás un café y te relajás. El equipo hace que cada visita valga la pena.</p>
+          <div class="review-author">— Sebastián V.</div>
+        </div>
+      </div>
+      <div class="reviews-dots" id="reviews-dots"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <p class="section-label reveal">Encuéntranos</p>
+    <h2 class="section-title reveal">Ubicación &amp;<br/><em>Contacto</em></h2>
+    <div class="divider reveal"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item reveal reveal-delay-1">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">Dirección</div>
+            <div class="contact-value">200 metros sur del Hospital Max Peralta<small>Cartago, Costa Rica</small></div>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-2">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">Horario</div>
+            <div class="contact-value">Lunes – Sábado<small>10:00 AM — 7:00 PM</small></div>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-3">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">WhatsApp / Teléfono</div>
+            <div class="contact-value"><a href="https://wa.me/50687183932?text=Me%20gustar%C3%ADa%20una%20cita..." target="_blank" style="color:inherit;">+506 8718-3932</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-4">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-label">Correo</div>
+            <div class="contact-value"><small style="font-size:0.82rem;">dreamhomedhcr@gmail.com</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-box reveal" style="padding:0;overflow:hidden;position:relative;">
+        <iframe
+          src="https://maps.google.com/maps?q=9.8582392,-83.9229068&z=17&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;display:block;min-height:320px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-cta-group">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=9.8582392,-83.9229068" target="_blank" class="map-cta">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Google Maps
+          </a>
+          <a href="https://waze.com/ul?ll=9.8582392,-83.9229068&navigate=yes" target="_blank" class="map-cta map-cta--waze">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            Waze
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVAR CTA -->
+  <section id="reservar">
+    <p class="section-label reveal" style="text-align:center;">¿Listo?</p>
+    <h2 class="reservar-title reveal">Reservá tu<br/><em>Cita</em></h2>
+    <p class="reservar-sub reveal">Agendá en línea y asegurate tu espacio con el equipo Dream Home.</p>
+    <div class="reveal">
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="btn-book">Reservar ahora →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Dream Home" />
+      </div>
+      <div class="footer-tagline">"Donde cada corte<br/>cuenta una historia."</div>
+    </div>
+
+    <div class="footer-col footer-nav">
+      <div class="footer-col-title">Navegación</div>
+      <a href="#servicios" class="footer-nav-link">Servicios</a>
+      <a href="#galeria"   class="footer-nav-link">Galería</a>
+      <a href="#equipo"    class="footer-nav-link">Equipo</a>
+      <a href="#resenas"   class="footer-nav-link">Reseñas</a>
+      <a href="#contacto"  class="footer-nav-link">Contacto</a>
+    </div>
+
+    <div class="footer-col footer-right">
+      <div class="footer-col-title">Síguenos</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/dreamhome_dhcr/" target="_blank" class="footer-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+          <span>@dreamhome_dhcr</span>
+        </a>
+        <a href="https://wa.me/50687183932?text=Me%20gustar%C3%ADa%20una%20cita..." target="_blank" class="footer-social-link" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>+506 8718-3932</span>
+        </a>
+        <a href="https://www.facebook.com/dreamhomedhcr/" target="_blank" class="footer-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <span>Dream Home Barbería</span>
+        </a>
+      </div>
+      </div>
+    </div>
+
+    <div class="footer-book-wrap">
+      <p class="footer-book-label">¿Listo para tu próxima visita?</p>
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="footer-book-btn">Reservar cita →</a>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    © 2026 Dream Home — Barbería &amp; Social Club. Todos los derechos reservados.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
