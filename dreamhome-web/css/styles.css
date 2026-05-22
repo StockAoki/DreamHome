@@ -60,7 +60,7 @@ body {
 .nav-links a {
   color: var(--offwhite);
   text-decoration: none;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 600;
@@ -437,7 +437,7 @@ section { padding: 5rem 4rem; }
   font-weight: 700;
 }
 .menu-item-desc {
-  font-size: 0.73rem;
+  font-size: 0.8rem;
   color: var(--gray);
   line-height: 1.65;
   margin-top: 0.35rem;
