@@ -36,6 +36,11 @@ mobileMenu.addEventListener('click', (e) => {
   if (e.target === mobileMenu) closeMenu();
 });
 
+// Cerrar con Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
+});
+
 /* ── SCROLL REVEAL ─────────────────────────────────────── */
 const reveals  = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
@@ -45,6 +50,38 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 reveals.forEach(el => observer.observe(el));
+
+/* ── GALLERY CLIP-PATH REVEAL ──────────────────────────── */
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+function revealGalleryItem(el) {
+  if (!el.classList.contains('visible')) {
+    el.classList.add('visible');
+  }
+}
+
+function checkGalleryItems() {
+  galleryItems.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+      revealGalleryItem(el);
+    }
+  });
+}
+
+const galleryObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      revealGalleryItem(entry.target);
+      galleryObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: '0px 0px -5% 0px' });
+
+galleryItems.forEach(el => galleryObserver.observe(el));
+
+window.addEventListener('scroll', checkGalleryItems, { passive: true });
+checkGalleryItems();
 
 /* ── REVIEWS AUTO-ROTATE (mobile) ─────────────────────── */
 (function () {

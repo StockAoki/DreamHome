@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -17,8 +17,8 @@
       <img src="img/logo.png" alt="Dream Home Logo" />
     </div>
     <ul class="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
       <li><a href="#galeria">Galería</a></li>
+      <li><a href="#servicios">Servicios</a></li>
       <li><a href="#equipo">Equipo</a></li>
       <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -42,38 +42,40 @@
     </div>
 
     <div class="menu-movil-enlaces">
-      <a href="#servicios" class="mobile-link">Servicios</a>
       <a href="#galeria" class="mobile-link">Galería</a>
+      <a href="#servicios" class="mobile-link">Servicios</a>
       <a href="#equipo" class="mobile-link">Equipo</a>
       <a href="#resenas" class="mobile-link">Reseñas</a>
       <a href="#contacto" class="mobile-link">Contacto</a>
     </div>
 
     <div class="mobile-footer">
-      <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="btn-primary mobile-reserve">
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" title="Abre en una nueva pestaña" class="btn-primary mobile-reserve">
         Reservar cita
       </a>
 
       <div class="mobile-socials">
-        <a href="https://instagram.com/dreamhome_dhcr/" target="_blank" class="mobile-social-btn" aria-label="Instagram">
+        
+        <a href="https://instagram.com/dreamhome_dhcr/" target="_blank" rel="noopener noreferrer" class="mobile-social-btn" aria-label="Instagram">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
           </svg>
         </a>
-        <a href="https://wa.me/50687183932" target="_blank" class="mobile-social-btn" aria-label="WhatsApp">
+        <a href="https://wa.me/50687183932" target="_blank" rel="noopener noreferrer" class="mobile-social-btn" aria-label="WhatsApp">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
           </svg>
         </a>
-        <a href="https://www.facebook.com/dreamhomedhcr/" target="_blank" class="mobile-social-btn" aria-label="Facebook">
+        <a href="https://www.facebook.com/dreamhomedhcr/" target="_blank" rel="noopener noreferrer" class="mobile-social-btn" aria-label="Facebook">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
           </svg>
         </a>
-        <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="mobile-social-btn" aria-label="Reservar cita">
+        <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" title="Abre en una nueva pestaña" class="mobile-social-btn mobile-social-btn--reserve" aria-label="Reservar cita">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
           </svg>
+          <span>Reservar</span>
         </a>
       </div>
     </div>
@@ -86,10 +88,10 @@
     <!-- Video de fondo — desktop: heroe.mp4 | mobile: Heroe1.mp4 -->
     <div class="hero-video-wrap">
       <video class="hero-vid hero-vid--desktop" autoplay muted loop playsinline>
-        <source src="heroe.mp4" type="video/mp4" />
+        <source src="img/videos/heroe.mp4" type="video/mp4" />
       </video>
       <video class="hero-vid hero-vid--mobile" autoplay muted loop playsinline>
-        <source src="Heroe1.mp4" type="video/mp4" />
+        <source src="img/videos/Heroe1.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="hero-video-overlay"></div>
@@ -101,7 +103,7 @@
       <h1 class="hero-title">Dream<br/><em>Home.</em></h1>
       <p class="hero-sub">Porque un buen corte no solo se ve bien,<br/>se siente bien y se adapta a vos.</p>
       <div class="hero-actions">
-        <a href="#reservar" class="btn-primary">Reservar cita</a>
+        <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" class="btn-primary">Reservar cita</a>
         <a href="#servicios" class="btn-secondary">Ver servicios</a>
       </div>
     </div>
@@ -111,6 +113,43 @@
       <span>Scroll</span>
     </div>
   </section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <p class="section-label reveal">La experiencia</p>
+  <h2 class="section-title reveal">Dream <em>Home</em></h2>
+  <div class="divider reveal"></div>
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <video autoplay muted loop playsinline>
+        <source src="img/videos/ServicioVideo.mp4" type="video/mp4" />
+      </video>
+      <div class="gallery-overlay"><span>Servicio en acción</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/Fabi.PNG" alt="Fabiana Serrano" />
+      <div class="gallery-overlay"><span>Estética & Cuidado</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/CorteCarlos.png" alt="Corte Carlos" />
+      <div class="gallery-overlay"><span>Corte clásico</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/servicio.jpg" alt="Experiencia premium" />
+      <div class="gallery-overlay"><span>Experiencia premium</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/corte.jpg" alt="Detalle y precisión" />
+      <div class="gallery-overlay"><span>Detalle & Precisión</span></div>
+    </div>
+
+  </div>
+</section>
 
   <!-- SERVICIOS -->
   <section id="servicios">
@@ -211,48 +250,10 @@
     <!-- CTA bajo el menú -->
     <div class="menu-cta reveal">
       <p>¿Listo para tu experiencia Dream Home?</p>
-      <a href="#reservar" class="btn-primary">Reservar cita</a>
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" class="btn-primary">Reservar cita</a>
     </div>
 
   </section>
-
-<!-- GALERÍA -->
-<section id="galeria">
-  <p class="section-label reveal">La experiencia</p>
-  <h2 class="section-title reveal">Dream <em>Home</em></h2>
-  <div class="divider reveal"></div>
-  <div class="gallery-grid reveal">
-
-    <div class="gallery-item">
-            <video autoplay muted loop playsinline>
-  <source src="ServicioVideo.mp4" type="video/mp4" />
-</video>
-      <div class="gallery-overlay"><span>Ver más</span></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="img/Fabi.PNG" alt="Trabajo 2" />
-      <div class="gallery-overlay"><span>Ver más</span></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="img/CorteCarlos.png" alt="Trabajo 3" />
-      <div class="gallery-overlay"><span>Ver más</span></div>
-    </div>
-
-    <div class="gallery-item">
- 
-      <img src="img/servicio.jpg" alt="Trabajo 1" />
-      <div class="gallery-overlay"><span>Ver más</span></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="img/corte.jpg" alt="Trabajo 5" />
-      <div class="gallery-overlay"><span>Ver más</span></div>
-    </div>
-
-  </div>
-</section>
 
 <!-- EQUIPO -->
 <section id="equipo">
@@ -326,6 +327,12 @@
     </div>
   </section>
 
+  <!-- MINI CTA -->
+  <div class="mini-cta reveal">
+    <p class="mini-cta-text">¿Listo para tu experiencia Dream Home?</p>
+    <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" class="btn-primary">Reservar cita</a>
+  </div>
+
   <!-- CONTACTO -->
   <section id="contacto">
     <p class="section-label reveal">Encuéntranos</p>
@@ -357,7 +364,7 @@
           </div>
           <div class="contact-detail">
             <div class="contact-label">WhatsApp / Teléfono</div>
-            <div class="contact-value"><a href="https://wa.me/50687183932?text=Me%20gustar%C3%ADa%20una%20cita..." target="_blank" style="color:inherit;">+506 8718-3932</a></div>
+            <div class="contact-value"><a href="https://wa.me/50687183932?text=Me%20gustar%C3%ADa%20una%20cita..." target="_blank" rel="noopener noreferrer" style="color:inherit;">+506 8718-3932</a></div>
           </div>
         </div>
         <div class="contact-item reveal reveal-delay-4">
@@ -381,7 +388,7 @@
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <div class="map-cta-group">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=9.8582392,-83.9229068" target="_blank" class="map-cta">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=9.8582392,-83.9229068" target="_blank" rel="noopener noreferrer" class="map-cta">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
             Google Maps
           </a>
@@ -400,7 +407,7 @@
     <h2 class="reservar-title reveal">Reservá tu<br/><em>Cita</em></h2>
     <p class="reservar-sub reveal">Agendá en línea y asegurate tu espacio con el equipo Dream Home.</p>
     <div class="reveal">
-      <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="btn-book">Reservar ahora →</a>
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" title="Abre en una nueva pestaña" class="btn-book">Reservar cita →</a>
     </div>
   </section>
 
@@ -425,15 +432,15 @@
     <div class="footer-col footer-right">
       <div class="footer-col-title">Síguenos</div>
       <div class="footer-social">
-        <a href="https://www.instagram.com/dreamhome_dhcr/" target="_blank" class="footer-social-link" aria-label="Instagram">
+        <a href="https://www.instagram.com/dreamhome_dhcr/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
           <span>@dreamhome_dhcr</span>
         </a>
-        <a href="https://wa.me/50687183932?text=Me%20gustar%C3%ADa%20una%20cita..." target="_blank" class="footer-social-link" aria-label="WhatsApp">
+        <a href="https://wa.me/50687183932?text=Me%20gustar%C3%ADa%20una%20cita..." target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           <span>+506 8718-3932</span>
         </a>
-        <a href="https://www.facebook.com/dreamhomedhcr/" target="_blank" class="footer-social-link" aria-label="Facebook">
+        <a href="https://www.facebook.com/dreamhomedhcr/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           <span>Dream Home Barbería</span>
         </a>
@@ -443,7 +450,7 @@
 
     <div class="footer-book-wrap">
       <p class="footer-book-label">¿Listo para tu próxima visita?</p>
-      <a href="https://app.puntia.app/booking/dream-home" target="_blank" class="footer-book-btn">Reservar cita →</a>
+      <a href="https://app.puntia.app/booking/dream-home" target="_blank" rel="noopener noreferrer" title="Abre en una nueva pestaña" class="footer-book-btn">Reservar cita →</a>
     </div>
   </footer>
   <div class="footer-bottom">
@@ -452,6 +459,6 @@
     ¿Interesado en una página web? <a href="https://sergioramirez9609.github.io/Portafolio/"> Sergio Ramírez Leiton</a>
   </div>
 
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
