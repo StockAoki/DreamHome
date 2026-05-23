@@ -52,10 +52,24 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
-## v1.2 — Pendiente de reunión (2026-05-21)
+## v1.2 — Optimización SEO (2026-05-23)
 
-> Completar esta sección después de la reunión con el cliente.
-> Usar la Plantilla_Correcciones_DreamHome.html para registrar los cambios solicitados.
+**2026-05-23 — SEO On-Page & Técnico — Solicitado por: Steven**
+
+- [Head] `<title>` actualizado con ubicación: "Dream Home — Barbería & Social Club | Cartago, Costa Rica"
+- [Head] `<meta name="description">` agregada con keywords locales y llamado a la acción
+- [Head] `<link rel="canonical">` apuntando a la URL de GitHub Pages (pendiente actualizar a dominio de producción)
+- [Head] Favicon referenciado en 3 variantes: `favicon.ico` (raíz), `favicon-32x32.png`, `favicon-16x16.png`
+- [Head] Open Graph tags agregados: `og:title`, `og:description`, `og:image`, `og:url`, `og:type`, `og:locale`
+- [Head] Twitter Card tags agregados: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
+- [Schema] JSON-LD tipo `BarberShop` agregado antes de `</body>`: nombre, dirección, coordenadas, teléfono, email, horario, redes sociales
+- [Hero] Eyebrow actualizado: "Barbería & Social Club" → "Barbería & Social Club · Cartago, Costa Rica"
+- [Videos] Atributo `poster` agregado a los 3 videos (`heroe.mp4`, `Heroe1.mp4`, `ServicioVideo.mp4`) — evita pantalla negra durante carga
+- [Equipo] Alt corregido: `alt="Carlos Quesada"` → `alt="Carlos Torres"`
+- [Contacto] `<div class="contact-info">` migrado a `<address class="contact-info">` para semántica correcta
+- [Raíz] Archivo `robots.txt` creado: permite indexación completa, referencia al sitemap
+- [Raíz] Archivo `sitemap.xml` creado con URL canónica, prioridad 1.0 y frecuencia mensual
+- [Raíz] `favicon.ico` copiado a la raíz del proyecto (browsers lo buscan en `/` por defecto)
 
 ---
 

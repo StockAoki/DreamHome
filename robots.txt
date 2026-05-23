@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dreamhomedhcr.github.io/DreamHome/sitemap.xml
