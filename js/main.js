@@ -85,22 +85,17 @@ checkGalleryItems();
 
 /* ── REVIEWS AUTO-ROTATE (mobile) ─────────────────────── */
 (function () {
-  if (window.innerWidth > 600) return;
-
-  const track   = document.getElementById('reviews-track');
+  const track    = document.getElementById('reviews-track');
   const dotsWrap = document.getElementById('reviews-dots');
   if (!track || !dotsWrap) return;
 
   const cards = Array.from(track.querySelectorAll('.review-card'));
   let current = 0;
-  let timer;
 
-  // Crear dots
   cards.forEach((_, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'reviews-dot' + (i === 0 ? ' active' : '');
-    btn.addEventListener('click', () => { goTo(i); resetTimer(); });
-    dotsWrap.appendChild(btn);
+    const dot = document.createElement('span');
+    dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+    dotsWrap.appendChild(dot);
   });
 
   const dots = dotsWrap.querySelectorAll('.reviews-dot');
@@ -113,19 +108,8 @@ checkGalleryItems();
     dots[current].classList.add('active');
   }
 
-  function next() { goTo((current + 1) % cards.length); }
-
-  function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(next, 4500);
-  }
-
-  // Pausar al tocar
-  track.addEventListener('touchstart', () => clearInterval(timer), { passive: true });
-  track.addEventListener('touchend', resetTimer, { passive: true });
-
   goTo(0);
-  resetTimer();
+  setInterval(() => goTo((current + 1) % cards.length), 10000);
 })();
 
 /* ── TEAM SCROLL DOTS ──────────────────────────────────── */

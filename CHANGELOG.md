@@ -73,6 +73,36 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.3 — UX móvil, carrusel y copywriting (2026-05-23)
+
+**2026-05-23 — Hero móvil — Solicitado por: Steven**
+
+- [Hero] Eyebrow simplificado: removido "· Cartago, Costa Rica" (señal de ubicación delegada a Schema.org y `<title>`)
+- [Hero] `font-size` del eyebrow reducido a `0.58rem` y `letter-spacing` a `0.18em` en móvil para evitar desborde visual
+- [Hero] Subtítulo (`hero-sub`) en móvil: color cambiado de `#9a9a9a` a `rgba(232,224,216,0.85)`, `font-weight` 300→400, `text-shadow` añadido para legibilidad sobre video
+- [Schema] JSON-LD `BarberShop` movido a posición semántica correcta en `<head>` (después de Open Graph/Twitter, antes de fuentes)
+- [Hero] H2 de galería corregido de "Dream Home" a "La Experiencia Dream Home" para evitar duplicado de H1 y mejorar señal SEO
+
+**2026-05-23 — Reseñas: carrusel automático — Solicitado por: Steven**
+
+- [Reseñas] Carrusel convertido a rotación automática cada 10 s — eliminados controles manuales (flechas/swipe)
+- [Reseñas] CSS migrado de layout scroll horizontal a grid overlay (cards apiladas con `opacity`/`visibility`) aplicable a todos los breakpoints
+- [Reseñas] Puntos indicadores permanecen visibles pero son solo decorativos (no clickeables)
+- [Reseñas] Sección ahora funciona igual en desktop y móvil
+
+**2026-05-23 — Copywriting — Solicitado por: Steven**
+
+- [Galería] `section-sub` añadido: "Antes de vivirlo, miralo." con estilo Cormorant Garamond itálica
+- [Servicios] Subtítulo actualizado: "Ahora elegís." (corto, directo)
+- [Reseñas] Subtítulo ajustado a enfoque de comunidad y pertenencia
+
+**2026-05-23 — Menú móvil — Solicitado por: Steven**
+
+- [Menú] Botón "Reservar" (calendario + label) eliminado del área de íconos sociales del menú móvil
+- [CSS] Regla `.mobile-social-btn--reserve` eliminada de `styles.css`
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
