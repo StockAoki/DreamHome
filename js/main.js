@@ -83,7 +83,7 @@ galleryItems.forEach(el => galleryObserver.observe(el));
 window.addEventListener('scroll', checkGalleryItems, { passive: true });
 checkGalleryItems();
 
-/* ── REVIEWS AUTO-ROTATE (mobile) ─────────────────────── */
+/* ── REVIEWS CAROUSEL (swipe + auto 6 s) ──────────────── */
 (function () {
   const track    = document.getElementById('reviews-track');
   const dotsWrap = document.getElementById('reviews-dots');
@@ -91,6 +91,8 @@ checkGalleryItems();
 
   const cards = Array.from(track.querySelectorAll('.review-card'));
   let current = 0;
+  let timer   = null;
+  let touchX  = 0;
 
   cards.forEach((_, i) => {
     const dot = document.createElement('span');
@@ -103,13 +105,30 @@ checkGalleryItems();
   function goTo(index) {
     cards[current].classList.remove('active');
     dots[current].classList.remove('active');
-    current = index;
+    current = (index + cards.length) % cards.length;
     cards[current].classList.add('active');
     dots[current].classList.add('active');
   }
 
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), 6000);
+  }
+
   goTo(0);
-  setInterval(() => goTo((current + 1) % cards.length), 10000);
+  resetTimer();
+
+  track.addEventListener('touchstart', e => {
+    touchX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    const delta = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) {
+      goTo(delta > 0 ? current + 1 : current - 1);
+      resetTimer();
+    }
+  }, { passive: true });
 })();
 
 /* ── TEAM SCROLL DOTS ──────────────────────────────────── */
@@ -142,4 +161,25 @@ if (teamGrid && teamDots && window.innerWidth <= 600) {
     const active = Math.round(teamGrid.scrollLeft / cardWidth);
     dots.forEach((d, i) => d.classList.toggle('active', i === active));
   }, { passive: true });
+}
+
+/* ── PRODUCTOS TOGGLE ──────────────────────────────────── */
+const productosTrigger = document.getElementById('productos-trigger');
+const productosPanel   = document.getElementById('productos-panel');
+
+if (productosTrigger && productosPanel) {
+  productosTrigger.addEventListener('click', () => {
+    const open = productosPanel.classList.toggle('open');
+    productosTrigger.setAttribute('aria-expanded', open);
+    productosPanel.setAttribute('aria-hidden', !open);
+
+    if (open) {
+      productosTrigger.querySelector('.productos-trigger-label').textContent = 'Ocultar productos';
+      setTimeout(() => {
+        productosTrigger.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+    } else {
+      productosTrigger.querySelector('.productos-trigger-label').textContent = 'Conocé nuestros productos';
+    }
+  });
 }

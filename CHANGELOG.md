@@ -103,6 +103,46 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.4 — Redes sociales, productos, reseñas reales y mejoras UX (2026-05-24)
+
+**2026-05-24 — Galería — Solicitado por: Steven**
+
+- [Galería] `gallery-overlay` ahora visible en mobile por defecto — media query `(hover: none), (pointer: coarse)` con `opacity: 1` y texto sin transform
+
+**2026-05-24 — Redes sociales — Solicitado por: Steven**
+
+- [Mobile menu] Botón TikTok agregado (`@dream.homecr`) junto a Instagram, WhatsApp y Facebook
+- [Footer] Link TikTok agregado en sección "Síguenos" con ícono SVG y handle `@dream.homecr`
+- [Schema] URL de TikTok agregada al array `sameAs` del JSON-LD
+
+**2026-05-24 — Reseñas — Solicitado por: Steven**
+
+- [Reseñas] Swipe táctil agregado en mobile: touchstart/touchend con threshold de 40px, avanza o retrocede
+- [Reseñas] Auto-avance reducido de 10s → 6s; timer se reinicia en cada swipe manual
+- [Reseñas] Desktop (>900px): 3 cards visibles simultáneamente en grid de 3 columnas iguales con hover `translateY(-5px)`
+- [Reseñas] Textos reales de Google Maps reemplazados: Jose Julian Orozco, Esteban Lafuente, Sebastian Garcia Monge
+
+**2026-05-24 — Equipo — Solicitado por: Steven**
+
+- [Equipo] Paulino Siles Serrano agregado como 4to miembro — rol: Barbero, foto placeholder `Carlos.jpg` (pendiente foto real)
+
+**2026-05-24 — Instagram CTA strip — Solicitado por: Steven**
+
+- [Galería] Banner full-width debajo de la galería: ícono IG + `@dreamhome_dhcr` + texto CTA + "Ver perfil →"
+- [Galería] En mobile: layout en columna alineado a la izquierda
+- [Galería] Texto del strip cambiado de `--gray` a `--offwhite` y de 1.1rem → 1.25rem para mejor visibilidad
+
+**2026-05-24 — Sección Productos — Solicitado por: Steven**
+
+- [Productos] Sección expandible agregada después de Servicios — trigger tipo barra full-width con animación de flecha rotatoria
+- [Productos] Panel con 3 columnas desktop / 2 tablet / scroll horizontal snap en mobile
+- [Productos] 3 productos placeholder: Pomada Fijadora (₡4.500), Aceite para Barba (₡6.000), Shampoo Premium (₡5.500)
+- [Productos] Cada card incluye link "Más información →" a WhatsApp con mensaje pre-llenado por producto
+- [Productos] Texto del trigger cambia entre "Conocé nuestros productos" / "Ocultar productos" según estado
+- [JS] Toggle de panel con `aria-expanded`, `aria-hidden` y scroll suave al trigger al abrir
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
