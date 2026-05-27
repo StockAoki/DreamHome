@@ -143,6 +143,30 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.5 — Equipo en 4 columnas, servicios completos y nuevas fotos (2026-05-26)
+
+**2026-05-26 — Equipo — Solicitado por: Steven**
+
+- [Equipo] Grid desktop cambiado de `repeat(3, 1fr)` a `repeat(4, 1fr)` — los 4 miembros quedan en una sola fila
+- [Equipo] Fotos reales agregadas: `Fabiana.JPG` y `Paulino.JPG`
+
+**2026-05-26 — Servicios — Solicitado por: Steven**
+
+- [Servicios] 6 servicios faltantes agregados a la columna Básicos (comparados contra sistema Puntia):
+  - Recorte de Barba (básico) — ₡6,500
+  - Mascarilla — ₡3,500
+  - Afeitado Completo de Cabeza — ₡7,500
+  - Corte Cabello Largo / Tijera — ₡10,000
+  - Nanoplastia — ₡22,000
+  - Corte de Cabello Corto + Recorte de Barba — ₡10,600
+
+**2026-05-26 — Assets — Solicitado por: Steven**
+
+- [Hero] Video `heroe.mp4` actualizado con versión nueva
+- [Productos] Foto `cremas.jpg` agregada
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
