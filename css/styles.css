@@ -663,7 +663,7 @@ section { padding: 5rem 4rem; }
 .team-swipe-hint { display: none; }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2px;
   margin-top: 4rem;
 }
