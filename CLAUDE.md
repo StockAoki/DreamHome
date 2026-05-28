@@ -37,7 +37,7 @@
 | Carlos Torres | Fundador / Barbero | Cortes clásicos y modernos |
 | Jose Alfredo | Barbero | — |
 | Fabiana Serrano | Esteticista | Tratamientos capilares |
-| Paulino Siles Serrano | Barbero | — |
+| Paulino Siles | Barbero | — |
 
 ---
 
@@ -192,6 +192,8 @@ DreamHome/
 
 ## Historial de versiones (resumen)
 
+**Versión actual: v1.6**
+
 | Versión | Fecha | Cambio principal |
 |---|---|---|
 | v1.0 | 2026-05-18 | Estructura base, 8 secciones, hero con video |
@@ -200,3 +202,51 @@ DreamHome/
 | v1.3 | 2026-05-23 | UX móvil, carrusel, copywriting |
 | v1.4 | 2026-05-24 | TikTok, productos expandibles, reseñas reales |
 | v1.5 | 2026-05-26 | Equipo 4 columnas, servicios completos, fotos nuevas |
+| v1.6 | 2026-05-27 | Tipografía hero, mapa dorado, video en galería |
+
+---
+
+## Copy aprobado por sección
+
+Estos textos están definidos y no deben cambiarse sin instrucción explícita.
+
+| Sección | Elemento | Texto |
+|---|---|---|
+| Hero | Eyebrow | Barbería & Social Club |
+| Hero | Título | Dream **Home** |
+| Hero | Subtítulo | Porque un buen corte no solo se ve bien, se siente y se adapta a vos en nuestras manos. |
+| Galería | Título | La Experiencia **Dream Home** |
+| Galería | Subtítulo | Antes de vivirlo, miralo. |
+| Servicios | Label | Lo que ofrecemos |
+| Servicios | Título | Servicios & **Precios** |
+| Equipo | Título | El **Equipo** |
+| Equipo | Subtítulo | Conoce a los profesionales que te brindarán la mejor experiencia en Dream Home |
+| Reseñas | Título | hablan por **nosotros** *(minúscula inicial — intencional)* |
+| Mini CTA | Texto | ¿Listo para tu experiencia Dream Home? |
+| Contacto | Título | Ubicación & **Contacto** |
+| Reservar | Título | Reservá tu **Cita** |
+| Reservar | Subtítulo | Agendá en línea y asegurate tu espacio con el equipo Dream Home. |
+
+Los elementos en **negrita** corresponden al `<em>` en HTML (color dorado `--accent`).
+
+---
+
+## Decisiones de diseño — no revertir
+
+Elecciones conscientes que ya fueron evaluadas y descartadas sus alternativas:
+
+- **Carrusel de reseñas sin flechas en móvil** — solo swipe táctil. Las flechas se removieron en v1.3 por saturación visual.
+- **Overlay de galería siempre visible en móvil** — en desktop aparece al hacer hover; en touch siempre está visible porque no hay hover.
+- **Hero con dos videos separados** — `Heroe.mp4` para desktop, `Heroe1.mp4` para móvil. Están cortados para cada orientación; no intercambiar.
+- **Equipo en móvil: scroll horizontal con dots** — no grid apilado. Los dots son interactivos y hay hint de swipe la primera vez.
+- **Sección Servicios sin subtítulo** — tiene solo label ("Lo que ofrecemos") + título. No agregar subtítulo salvo que se pida.
+- **Nombre de Paulino: "Paulino Siles"** — el apellido "Serrano" se quitó en v1.6. Usar siempre el nombre corto.
+
+---
+
+## Roadmap pendiente
+
+- [ ] Migrar dominio a `dreamhomecr.com` (actualmente en GitHub Pages)
+- [ ] Configurar Cloudflare Pages al hacer la migración
+- [ ] Dar de alta en Google Search Console
+- [ ] Usar `corte2.jpg` en galería (foto disponible, no usada aún)
