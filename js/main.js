@@ -17,10 +17,14 @@ const menuClose  = document.getElementById('menu-close');
 function openMenu() {
   mobileMenu.classList.add('open');
   document.body.style.overflow = 'hidden';
+  hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Cerrar menú');
 }
 function closeMenu() {
   mobileMenu.classList.remove('open');
   document.body.style.overflow = '';
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Abrir menú');
 }
 
 hamburger.addEventListener('click', openMenu);
@@ -97,6 +101,7 @@ checkGalleryItems();
   cards.forEach((_, i) => {
     const dot = document.createElement('span');
     dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => { goTo(i); resetTimer(); });
     dotsWrap.appendChild(dot);
   });
 
@@ -135,32 +140,48 @@ checkGalleryItems();
 const teamGrid = document.getElementById('team-grid');
 const teamDots = document.getElementById('team-dots');
 
-if (teamGrid && teamDots && window.innerWidth <= 600) {
-  const swipeHint = document.getElementById('team-swipe-hint');
-  if (swipeHint) {
-    teamGrid.addEventListener('scroll', () => {
-      swipeHint.classList.add('hidden');
-    }, { passive: true, once: true });
-    setTimeout(() => swipeHint.classList.add('hidden'), 6000);
-  }
-  const cards = teamGrid.querySelectorAll('.team-card');
+if (teamGrid && teamDots) {
+  const swipeHint    = document.getElementById('team-swipe-hint');
+  const cards        = teamGrid.querySelectorAll('.team-card');
+  const mobileQuery  = window.matchMedia('(max-width: 600px)');
+  let hintInitialized = false;
 
-  cards.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.className = 'team-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => {
-      cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  function buildDots() {
+    teamDots.innerHTML = '';
+    cards.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'team-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
+      teamDots.appendChild(dot);
     });
-    teamDots.appendChild(dot);
-  });
+  }
 
-  const dots = teamDots.querySelectorAll('.team-dot');
-
-  teamGrid.addEventListener('scroll', () => {
+  function updateActiveDot() {
+    const dots = teamDots.querySelectorAll('.team-dot');
+    if (!dots.length) return;
     const cardWidth = cards[0].offsetWidth + 12;
     const active = Math.round(teamGrid.scrollLeft / cardWidth);
     dots.forEach((d, i) => d.classList.toggle('active', i === active));
-  }, { passive: true });
+  }
+
+  function handleMediaChange(e) {
+    if (e.matches) {
+      buildDots();
+      if (!hintInitialized && swipeHint) {
+        teamGrid.addEventListener('scroll', () => swipeHint.classList.add('hidden'), { passive: true, once: true });
+        setTimeout(() => swipeHint.classList.add('hidden'), 6000);
+        hintInitialized = true;
+      }
+    } else {
+      teamDots.innerHTML = '';
+    }
+  }
+
+  teamGrid.addEventListener('scroll', updateActiveDot, { passive: true });
+  mobileQuery.addEventListener('change', handleMediaChange);
+  handleMediaChange(mobileQuery);
 }
 
 /* ── PRODUCTOS TOGGLE ──────────────────────────────────── */

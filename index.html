@@ -9,6 +9,8 @@
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="img/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="manifest" href="img/site.webmanifest" />
   <meta property="og:title" content="Dream Home — Barbería &amp; Social Club | Cartago" />
   <meta property="og:description" content="La mejor experiencia de barbería en Cartago, Costa Rica. Cortes, arreglo de barba, limpieza facial y más. Reservá tu cita en línea." />
   <meta property="og:image" content="https://dreamhomedhcr.github.io/DreamHome/img/servicio.jpg" />
@@ -76,9 +78,9 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="cursor:pointer;">
+    <a href="#" class="nav-logo" aria-label="Ir al inicio" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">
       <img src="img/logo.png" alt="Dream Home Logo" />
-    </div>
+    </a>
     <ul class="nav-links">
       <li><a href="#galeria">La Experiencia</a></li>
       <li><a href="#servicios">Servicios</a></li>
@@ -87,9 +89,9 @@
       <li><a href="#contacto">Contacto</a></li>
       <li><a href="#reservar" class="nav-cta">Reservar</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </nav>
 
 <!-- MOBILE MENU -->
@@ -192,7 +194,7 @@
     </div>
 
     <div class="gallery-item">
-      <img src="img/Fabiana.JPG" alt="Fabiana Serrano" />
+      <img src="img/Fabiana.jpg" alt="Fabiana Serrano" />
       <div class="gallery-overlay"><span>Estética & Cuidado</span></div>
     </div>
 
@@ -207,7 +209,7 @@
     </div>
 
     <div class="gallery-item">
-      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+      <video autoplay muted loop playsinline poster="img/corte.jpg">
         <source src="img/videos/trabajando.mp4" type="video/mp4" />
       </video>
       <div class="gallery-overlay"><span>Detalle & Precisión</span></div>
@@ -468,7 +470,7 @@
     </div>
 
     <div class="team-card reveal reveal-delay-3">
-      <img src="img/Fabiana.JPG" alt="Fabiana Serrano" class="team-photo" />
+      <img src="img/Fabiana.jpg" alt="Fabiana Serrano" class="team-photo" />
       <div class="team-info">
         <div class="team-role">Estética & Atención al Cliente</div>
         <div class="team-name">Fabiana Serrano</div>
@@ -477,7 +479,7 @@
     </div>
 
     <div class="team-card reveal reveal-delay-4">
-      <img src="img/Paulino.JPG" alt="Paulino Siles Serrano" class="team-photo" />
+      <img src="img/Paulino.jpg" alt="Paulino Siles" class="team-photo" />
       <div class="team-info">
         <div class="team-role">Barbero</div>
         <div class="team-name">Paulino Siles</div>

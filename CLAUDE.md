@@ -250,3 +250,15 @@ Elecciones conscientes que ya fueron evaluadas y descartadas sus alternativas:
 - [ ] Configurar Cloudflare Pages al hacer la migración
 - [ ] Dar de alta en Google Search Console
 - [ ] Usar `corte2.jpg` en galería (foto disponible, no usada aún)
+- [ ] Actualizar `sitemap.xml lastmod` como parte del flujo de deploy (actualmente se hace manual)
+
+## Backlog de mejoras (auditoria v1.6)
+
+Issues identificados, no urgentes, para próxima ronda de mejoras:
+
+- **Alt text galería** — mejorar descripción de imágenes para SEO: `alt="Fabiana Serrano, esteticista aplicando tratamiento"` en lugar de texto genérico
+- **`og:image`** — verificar que `servicio.jpg` tenga dimensiones 1200×630 para que se vea correctamente al compartir en redes
+- **"La Experiencia" en nav** — evaluar si renombrar a "Galería" para mayor claridad (cosmético)
+- **Botón "volver arriba"** — agregar en móvil dado que la página es larga
+- **Carousel de reseñas en desktop** — los dots ya son clickables (fix v1.6), pero en mobile el salto a reseña específica depende de swipe; evaluar si agregar numeración o indicador de posición
+- **Canonical y Schema URLs** — actualizar todas de una vez al migrar a `dreamhomecr.com`: canonical, og:url, twitter:image, Schema `"url"` e `"image"`, sitemap.xml

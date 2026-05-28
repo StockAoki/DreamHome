@@ -197,6 +197,41 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.7 — Accesibilidad, calidad de código y auditoría (2026-05-28)
+
+**2026-05-28 — Accesibilidad — Solicitado por: Steven**
+
+- [Nav] `<div class="hamburger">` migrado a `<button>` con `aria-label="Abrir menú"` y `aria-expanded="false"` — navegable por teclado y anunciado por lectores de pantalla
+- [Nav] `aria-label` y `aria-expanded` se actualizan dinámicamente al abrir/cerrar el menú móvil
+- [Nav] `<div class="nav-logo" onclick>` migrado a `<a href="#" class="nav-logo">` — semántica correcta, navegable por teclado
+- [CSS] `.hamburger` reset de estilos de `<button>`: `background: none; border: none; padding: 0`
+- [CSS] `.nav-logo` reset de estilos de `<a>`: `text-decoration: none; color: inherit`
+
+**2026-05-28 — Video y assets — Solicitado por: Steven**
+
+- [Galería] Video `trabajando.mp4` (ítem 5): atributo `poster="img/corte.jpg"` agregado — elimina pantalla negra al cargar
+- [Galería] Inline styles del video eliminados (`style="width:100%;..."`) — ya cubiertos por `.gallery-item video` en CSS
+- [Head] `<link rel="apple-touch-icon">` y `<link rel="manifest">` agregados al `<head>` — los archivos existían pero no estaban referenciados
+
+**2026-05-28 — Imágenes — Solicitado por: Steven**
+
+- [Img] `Fabiana.JPG` y `Paulino.JPG` renombrados a `Fabiana.jpg` y `Paulino.jpg` — extensiones normalizadas a minúscula para compatibilidad con Linux/GitHub Pages
+- [Img] Referencias actualizadas en `index.html`
+- [Img] Archivos huérfanos eliminados: `img/Fabi.PNG` e `img/Fabiana.png` (reemplazados en v1.5, no usados)
+- [Img] Nombre de Paulino corregido en alt text: `alt="Paulino Siles Serrano"` → `alt="Paulino Siles"`
+
+**2026-05-28 — JavaScript — Solicitado por: Steven**
+
+- [Reseñas] Dots del carrusel ahora son clickables — click en un dot navega a esa reseña y reinicia el timer
+- [Equipo] Team dots refactorizados con `matchMedia` — se inicializan/destruyen correctamente al rotar el dispositivo o cambiar el tamaño de ventana (antes solo se inicializaban una vez al cargar si `innerWidth <= 600`)
+- [Equipo] Swipe hint solo se inicializa una vez (aunque se rote el dispositivo varias veces)
+
+**2026-05-28 — SEO — Solicitado por: Steven**
+
+- [Sitemap] `lastmod` actualizado a 2026-05-28
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
