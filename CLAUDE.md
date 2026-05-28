@@ -135,7 +135,7 @@ Sitio estático de una sola página (`index.html`). Sin framework ni bundler —
 
 ## Historial de versiones (resumen)
 
-**Versión actual: v1.7**
+**Versión actual: v1.8**
 
 | Versión | Fecha | Cambio principal |
 |---|---|---|
@@ -147,6 +147,7 @@ Sitio estático de una sola página (`index.html`). Sin framework ni bundler —
 | v1.5 | 2026-05-26 | Equipo 4 columnas, servicios completos, fotos nuevas |
 | v1.6 | 2026-05-27 | Tipografía hero, mapa dorado, video en galería |
 | v1.7 | 2026-05-28 | Accesibilidad, fixes de auditoría, normalización de assets |
+| v1.8 | 2026-05-28 | Estructura de archivos y PWA corregidos |
 
 ---
 
