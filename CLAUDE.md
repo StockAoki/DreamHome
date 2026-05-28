@@ -5,6 +5,7 @@
 - **No agregar Co-Authored-By en ningún commit.** Los commits deben tener solo el autor humano, sin líneas de autoría de Claude ni de ninguna herramienta de IA.
 - Idioma de trabajo: español en todo (HTML, comentarios, mensajes de commit).
 - No crear archivos de documentación adicionales salvo que el usuario lo pida.
+- **Antes de cada commit, actualizar `CHANGELOG.md`** con una entrada nueva bajo la versión correspondiente. Formato: `YYYY-MM-DD — Sección — descripción — Solicitado por: Steven`. Si los cambios son suficientes para incrementar versión, crear una nueva sección `## vX.X`.
 
 ---
 
