@@ -184,23 +184,31 @@ if (teamGrid && teamDots) {
   handleMediaChange(mobileQuery);
 }
 
-/* ── PRODUCTOS TOGGLE ──────────────────────────────────── */
-const productosTrigger = document.getElementById('productos-trigger');
-const productosPanel   = document.getElementById('productos-panel');
+/* ── MODAL PRODUCTOS ──────────────────────────────────── */
+const modalOverlay  = document.getElementById('productos-modal');
+const modalOpenBtn  = document.getElementById('productos-modal-btn');
+const modalCloseBtn = document.getElementById('productos-modal-close');
 
-if (productosTrigger && productosPanel) {
-  productosTrigger.addEventListener('click', () => {
-    const open = productosPanel.classList.toggle('open');
-    productosTrigger.setAttribute('aria-expanded', open);
-    productosPanel.setAttribute('aria-hidden', !open);
+function openProductosModal() {
+  modalOverlay.classList.add('open');
+  modalOverlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  modalCloseBtn.focus();
+}
 
-    if (open) {
-      productosTrigger.querySelector('.productos-trigger-label').textContent = 'Ocultar productos';
-      setTimeout(() => {
-        productosTrigger.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 50);
-    } else {
-      productosTrigger.querySelector('.productos-trigger-label').textContent = 'Conocé nuestros productos';
-    }
+function closeProductosModal() {
+  modalOverlay.classList.remove('open');
+  modalOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+if (modalOverlay && modalOpenBtn) {
+  modalOpenBtn.addEventListener('click', openProductosModal);
+  modalCloseBtn.addEventListener('click', closeProductosModal);
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeProductosModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeProductosModal();
   });
 }

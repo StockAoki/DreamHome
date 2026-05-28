@@ -252,6 +252,49 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v2.0 — Catálogo de productos real (2026-05-28)
+
+**2026-05-28 — Productos — Solicitado por: Steven**
+
+- [Productos] 3 tarjetas placeholder reemplazadas por 5 productos reales con imágenes propias, precios actualizados y links directos al catálogo de WhatsApp Business (`wa.me/p/`)
+- [Productos] Jabón de Barba — ₡6.000 — `img/jabonbarba.jpeg`
+- [Productos] Cera de Cabello — ₡9.500 — `img/ceracabello.jpeg` — variantes: Acabado mate · Acabado brillante
+- [Productos] Loción Minoxidil — ₡10.500 — `img/LocionMinoxidil.jpeg`
+- [Productos] Aceite de Barba — ₡8.500 — `img/Aceitebarba.jpeg` — variantes: Coco y lima · Lavanda y menta
+- [Productos] Bálsamo Minoxidil — ₡10.500 — `img/Balsamo.jpeg`
+- [Productos] Botón cambiado de "Más información →" a "Comprar →" — link directo a producto en catálogo
+- [CSS] Grid desktop cambiado de `repeat(3, 1fr)` → `repeat(5, 1fr)` — todos los productos en una fila
+- [CSS] Grid tablet (≤900px) cambiado de `repeat(2, 1fr)` → `repeat(3, 1fr)` — 3+2 columnas
+- [CSS] `aspect-ratio` de imagen de producto cambiado de `4/3` → `3/4` — ajustado a fotos verticales de producto
+- [CSS] `max-width` del grid ampliado de 1100px → 1400px para acomodar 5 columnas
+
+---
+
+## v2.1 — Modal de productos y ajustes de UI (2026-05-28)
+
+**2026-05-28 — Productos — Solicitado por: Steven**
+
+- [Productos] Panel expandible reemplazado por modal con overlay — el trigger pasa a ser un CTA centrado con eyebrow, título Playfair y pill "Ver catálogo completo →"
+- [Modal] Header (título + botón ✕) fijo arriba; solo el grid de productos hace scroll interno (`flex column` + `overflow-y: auto` en `.productos-modal-body`)
+- [Modal] Grid fluido `auto-fill minmax(200px)` en desktop; 2 columnas en móvil
+- [Modal] Cierre con clic en ✕, clic en backdrop, o tecla Escape; bloquea scroll del body mientras está abierto
+
+**2026-05-28 — Nav — Solicitado por: Steven**
+
+- [Nav] Botón "Reservar" cambiado de ancla `#reservar` a link directo `https://app.puntia.app/booking/dream-home` con `target="_blank"`
+
+**2026-05-28 — Contacto — Solicitado por: Steven**
+
+- [Contacto] Email `dreamhomedhcr@gmail.com` envuelto en `<a href="mailto:...">` — abre cliente de correo al hacer clic
+- [Contacto] `.contact-value small` aumentado de `0.75rem` → `0.92rem` (dirección y horario más legibles)
+
+**2026-05-28 — Responsive — Solicitado por: Steven**
+
+- [Mini CTA] Botón "Reservar cita" centrado en móvil con `display: block; width: fit-content; margin: 0 auto` en `@media (max-width: 600px)`
+- [Global] Padding inferior de secciones en móvil reducido: `5rem 2rem` → `5rem 2rem 3.5rem`
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
