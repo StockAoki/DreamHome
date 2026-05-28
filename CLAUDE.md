@@ -81,26 +81,7 @@ Los productos se venden vía WhatsApp con link pre-llenado.
 
 ## Arquitectura del sitio
 
-Sitio estático de una sola página (`index.html`). Sin framework ni bundler — HTML, CSS y JS puros.
-
-```
-DreamHome/
-├── index.html          ← página única (665 líneas aprox.)
-├── css/styles.css      ← todos los estilos (1705 líneas)
-├── js/main.js          ← interactividad (186 líneas)
-├── img/
-│   ├── Carlos.jpg, Alfredo.JPG, Fabiana.JPG, Paulino.JPG  ← fotos equipo
-│   ├── servicio.jpg, CorteCarlos.png, corte.jpg, corte2.jpg, cremas.jpg  ← galería
-│   ├── logo.png
-│   └── videos/
-│       ├── Heroe.mp4       ← video hero desktop
-│       ├── Heroe1.mp4      ← video hero móvil
-│       ├── ServicioVideo.mp4
-│       └── trabajando.mp4
-├── robots.txt
-├── sitemap.xml
-└── CHANGELOG.md
-```
+Sitio estático de una sola página (`index.html`). Sin framework ni bundler — HTML, CSS y JS puros. Assets en `img/` (fotos, videos, favicon, PWA). Estilos en `css/styles.css`, interactividad en `js/main.js`.
 
 ### Secciones del index.html (en orden)
 
@@ -152,47 +133,9 @@ DreamHome/
 
 ---
 
-## JavaScript — funcionalidades principales
-
-| Feature | Descripción |
-|---|---|
-| Nav scroll | Clase `scrolled` al superar 60px, activa blur + border |
-| Menú móvil | Hamburger → slide derecha; cierra con X, Esc o click afuera |
-| Scroll reveal | IntersectionObserver sobre `.reveal`, threshold 0.12 |
-| Galería reveal | Observer + fallback scroll, threshold 0.05 |
-| Carrusel reseñas | Auto 6s, swipe 40px, resetea timer en manual |
-| Dots equipo (móvil) | Scroll horizontal con dots interactivos, hint desaparece tras primer scroll |
-| Toggle productos | Expande/colapsa, rota flecha 180°, hace scroll hasta el trigger |
-
----
-
-## SEO y metadatos
-
-- Schema.org `BarberShop` en JSON-LD (head)
-- Open Graph (og:title, og:description, og:image, og:url, og:type, og:locale)
-- Twitter Card (summary_large_image)
-- Canonical: URL de GitHub Pages
-- robots.txt: Allow all
-- sitemap.xml: homepage, priority 1.0, monthly
-- `<address>` semántico en sección de contacto
-
----
-
-## Animaciones
-
-- `@keyframes fadeUp` — aparece subiendo (translateY + opacity)
-- `@keyframes fadeIn` — solo opacidad
-- `@keyframes slowSpin` — rotación continua
-- `@keyframes scrollPulse` — indicador de scroll parpadeante
-- `.reveal` + `.visible` — activadas por IntersectionObserver
-- `.reveal-delay-1` a `.reveal-delay-4` — delays escalonados
-- `@media (prefers-reduced-motion: reduce)` — desactiva todo
-
----
-
 ## Historial de versiones (resumen)
 
-**Versión actual: v1.6**
+**Versión actual: v1.7**
 
 | Versión | Fecha | Cambio principal |
 |---|---|---|
@@ -203,6 +146,7 @@ DreamHome/
 | v1.4 | 2026-05-24 | TikTok, productos expandibles, reseñas reales |
 | v1.5 | 2026-05-26 | Equipo 4 columnas, servicios completos, fotos nuevas |
 | v1.6 | 2026-05-27 | Tipografía hero, mapa dorado, video en galería |
+| v1.7 | 2026-05-28 | Accesibilidad, fixes de auditoría, normalización de assets |
 
 ---
 
