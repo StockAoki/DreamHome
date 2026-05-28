@@ -135,7 +135,7 @@ Sitio estático de una sola página (`index.html`). Sin framework ni bundler —
 
 ## Historial de versiones (resumen)
 
-**Versión actual: v1.8**
+**Versión actual: v1.9**
 
 | Versión | Fecha | Cambio principal |
 |---|---|---|
@@ -144,10 +144,11 @@ Sitio estático de una sola página (`index.html`). Sin framework ni bundler —
 | v1.2 | 2026-05-23 | SEO on-page: Schema.org, OG, sitemap, robots |
 | v1.3 | 2026-05-23 | UX móvil, carrusel, copywriting |
 | v1.4 | 2026-05-24 | TikTok, productos expandibles, reseñas reales |
-| v1.5 | 2026-05-26 | Equipo 4 columnas, servicios completos, fotos nuevas |
+| v1.5 | 2026-05-26 | Equipo 4 Columnas, servicios completos, fotos nuevas |
 | v1.6 | 2026-05-27 | Tipografía hero, mapa dorado, video en galería |
 | v1.7 | 2026-05-28 | Accesibilidad, fixes de auditoría, normalización de assets |
 | v1.8 | 2026-05-28 | Estructura de archivos y PWA corregidos |
+| v1.9 | 2026-05-28 | Título hero revertido a Dream Home |
 
 ---
 

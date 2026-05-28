@@ -244,6 +244,14 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.9 — Título hero revertido a Dream Home (2026-05-28)
+
+**2026-05-28 — Hero — Solicitado por: Steven**
+
+- [Hero] Título revertido de "DH Barbería" a "Dream Home" — decisión de marca: el nombre está posicionado y el cambio a DH se hará cuando sea estratégico, no como reacción al dominio
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
