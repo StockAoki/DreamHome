@@ -187,9 +187,7 @@ Elecciones conscientes que ya fueron evaluadas y descartadas sus alternativas:
 - **Nombre de Paulino: "Paulino Siles"** — el apellido "Serrano" se quitó en v1.6. Usar siempre el nombre corto.
 
 ---
-
 ## Roadmap pendiente
-
 - [ ] Migrar dominio a `dreamhomecr.com` (actualmente en GitHub Pages)
 - [ ] Configurar Cloudflare Pages al hacer la migración
 - [ ] Dar de alta en Google Search Console

@@ -232,6 +232,18 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.8 — Estructura de archivos y PWA (2026-05-28)
+
+**2026-05-28 — Proyecto — Solicitado por: Steven**
+
+- [Raíz] `gitignore` renombrado a `.gitignore` — git ahora sí ignora `.claude/`, `.gstack/` y `skills-lock.json`
+- [Raíz] `site.webmanifest` movido de `img/` a la raíz — ubicación estándar; rutas de íconos corregidas a `img/android-chrome-*.png`; nombre y colores del manifest actualizados con la marca Dream Home
+- [Head] `<link rel="manifest">` actualizado de `img/site.webmanifest` → `site.webmanifest`
+- [Img] `img/favicon.ico` eliminado — era duplicado del `favicon.ico` en la raíz
+- [Img] `Alfredo.JPG` renombrado a `Alfredo.jpg` en disco — extensión normalizada a minúscula (consistente con el resto)
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
