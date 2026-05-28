@@ -167,6 +167,36 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v1.6 — Tipografía hero, mapa mejorado y video en galería (2026-05-27)
+
+**2026-05-27 — Tipografía — Solicitado por: Steven**
+
+- [Hero] Eyebrow `font-size` aumentado: 0.65rem → 0.75rem
+- [Hero] Subtítulo `hero-sub` aumentado: 1.2rem → 1.6rem — mayor presencia visual
+- [Global] `section-sub` aumentado: 1.15rem → 2rem — subtítulos de sección más impactantes
+
+**2026-05-27 — Mapa de contacto — Solicitado por: Steven**
+
+- [Contacto] `.map-box` borde cambiado a tono dorado: `rgba(200, 169, 110, 0.35)` + `border-radius: 4px` + `box-shadow` de profundidad
+- [Contacto] `.map-box::after` agregado: gradiente degradado hacia abajo que suaviza el borde inferior del mapa
+- [Contacto] Botones de navegación del mapa: `z-index: 2` para que queden sobre el gradiente
+
+**2026-05-27 — Galería — Solicitado por: Steven**
+
+- [Galería] Ítem 5: imagen estática `corte.jpg` reemplazada por video `trabajando.mp4` (autoplay, muted, loop)
+- [Galería] Ruta de foto de Fabiana corregida: `img/Fabi.PNG` → `img/Fabiana.JPG`
+
+**2026-05-27 — Equipo — Solicitado por: Steven**
+
+- [Equipo] Nombre de Paulino acortado: "Paulino Siles Serrano" → "Paulino Siles"
+- [Equipo] Foto de Alfredo actualizada (`Alfredo.jpg`)
+
+**2026-05-27 — Proyecto — Solicitado por: Steven**
+
+- [CLAUDE.md] Contexto completo del proyecto documentado para uso con Claude Code
+
+---
+
 ## Notas de versiones futuras
 
 - [ ] Publicación en dominio propio (dreamhomecr.com)
