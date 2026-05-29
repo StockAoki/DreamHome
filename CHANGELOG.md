@@ -5,6 +5,19 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v2.3 — Migración de dominio a dhbarberiacr.com
+
+**2026-05-28**
+- SEO — `canonical` actualizado a `https://dhbarberiacr.com/` — Solicitado por: Steven
+- SEO — `og:url` y `og:image` actualizados al nuevo dominio — Solicitado por: Steven
+- SEO — `twitter:image` actualizado al nuevo dominio — Solicitado por: Steven
+- SEO — Schema.org `url` e `image` actualizados al nuevo dominio — Solicitado por: Steven
+- SEO — `sitemap.xml` actualizado al nuevo dominio — Solicitado por: Steven
+- SEO — `robots.txt` Sitemap URL actualizado al nuevo dominio — Solicitado por: Steven
+- Docs — `CLAUDE.md` actualizado: URL de producción y roadmap — Solicitado por: Steven
+
+---
+
 ## v2.2 — Flujo de ramas dev/main
 
 **2026-05-28**

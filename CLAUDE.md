@@ -31,8 +31,8 @@
 | TikTok | @dream.homecr |
 | Coordenadas | 9.8582392, -83.9229068 |
 
-**URL producción:** https://dreamhomedhcr.github.io/DreamHome/  
-**Dominio futuro:** dreamhomecr.com  
+**URL producción:** https://dhbarberiacr.com/  
+**Dominio anterior (GitHub Pages):** https://dreamhomedhcr.github.io/DreamHome/  
 **Repositorio:** https://github.com/StockAoki/DreamHome
 
 ---
@@ -197,9 +197,10 @@ Elecciones conscientes que ya fueron evaluadas y descartadas sus alternativas:
 
 ---
 ## Roadmap pendiente
-- [ ] Migrar dominio a `dreamhomecr.com` (actualmente en GitHub Pages)
-- [ ] Configurar Cloudflare Pages al hacer la migración
-- [ ] Dar de alta en Google Search Console
+- [x] Dominio comprado: `dhbarberiacr.com` (Cloudflare Registrar) — 2026-05-28
+- [x] URLs del proyecto actualizadas al nuevo dominio — 2026-05-28
+- [ ] Configurar Cloudflare Pages para servir el sitio
+- [ ] Dar de alta en Google Search Console con el nuevo dominio
 - [ ] Usar `corte2.jpg` en galería (foto disponible, no usada aún)
 - [ ] Actualizar `sitemap.xml lastmod` como parte del flujo de deploy (actualmente se hace manual)
 
@@ -212,4 +213,4 @@ Issues identificados, no urgentes, para próxima ronda de mejoras:
 - **"La Experiencia" en nav** — evaluar si renombrar a "Galería" para mayor claridad (cosmético)
 - **Botón "volver arriba"** — agregar en móvil dado que la página es larga
 - **Carousel de reseñas en desktop** — los dots ya son clickables (fix v1.6), pero en mobile el salto a reseña específica depende de swipe; evaluar si agregar numeración o indicador de posición
-- **Canonical y Schema URLs** — actualizar todas de una vez al migrar a `dreamhomecr.com`: canonical, og:url, twitter:image, Schema `"url"` e `"image"`, sitemap.xml
+- ~~**Canonical y Schema URLs**~~ — completado en v2.3: todas las URLs migradas a `dhbarberiacr.com`
