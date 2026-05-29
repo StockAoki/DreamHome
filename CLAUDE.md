@@ -7,6 +7,13 @@
 - No crear archivos de documentación adicionales salvo que el usuario lo pida.
 - **Antes de cada commit, actualizar `CHANGELOG.md`** con una entrada nueva bajo la versión correspondiente. Formato: `YYYY-MM-DD — Sección — descripción — Solicitado por: Steven`. Si los cambios son suficientes para incrementar versión, crear una nueva sección `## vX.X`.
 
+### Flujo de ramas
+
+- **Todo el desarrollo se hace en la rama `dev`.**
+- Cuando Steven pida "commit" o "commit y push": hacer commit en `dev` y pushear solo a `origin/dev`. Nunca a `main`.
+- Cuando Steven pida "subir a main" o "mergear a main": hacer `git checkout main`, `git merge dev`, `git push origin main`, y volver a `dev` (`git checkout dev`). Solo en este caso se toca `main`.
+- Si por algún motivo no se está en la rama correcta, cambiar a `dev` antes de hacer cualquier cambio.
+
 ---
 
 ## El negocio

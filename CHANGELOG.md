@@ -5,6 +5,14 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v2.2 — Flujo de ramas dev/main
+
+**2026-05-28**
+- Infraestructura — Rama `dev` creada desde `main` — Solicitado por: Steven
+- Infraestructura — CLAUDE.md actualizado con reglas de flujo: commits siempre en `dev`, merge a `main` solo cuando Steven lo pida — Solicitado por: Steven
+
+---
+
 ## v1.0 — Versión inicial
 
 **2026-05-18**
