@@ -5,6 +5,13 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v2.4 — Crédito web en sección Contacto
+
+**2026-06-08**
+- Contacto — Agregado bloque "web-credit" con link a Alternativo Studio al final de la sección — Solicitado por: Steven
+
+---
+
 ## v2.3 — Migración de dominio a dhbarberiacr.com
 
 **2026-05-28**
