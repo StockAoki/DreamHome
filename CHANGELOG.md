@@ -5,6 +5,16 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v2.5 — Analytics: tracking de eventos de clicks
+
+**2026-07-03**
+- Analytics — Evento `click_reserva` en todos los botones de Puntia (nav, hero, mini_cta, sección reservar, footer, menú móvil) — Solicitado por: Steven
+- Analytics — Evento `click_whatsapp` en todos los links de WhatsApp con parámetro `producto` para los 5 productos — Solicitado por: Steven
+- Analytics — Evento `click_alternativo_studio` en el link del footer — Solicitado por: Steven
+- HTML — Atributo `data-producto` agregado a cada `.producto-card` para identificar el producto en el evento — Solicitado por: Steven
+
+---
+
 ## v2.4 — Crédito web en sección Contacto
 
 **2026-06-08**

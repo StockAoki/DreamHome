@@ -212,3 +212,48 @@ if (modalOverlay && modalOpenBtn) {
     if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeProductosModal();
   });
 }
+
+/* ── ANALYTICS — TRACKING DE EVENTOS ──────────────────── */
+function trackLocation(el) {
+  if (el.closest('#reservar'))       return 'seccion_reservar';
+  if (el.closest('.footer-bottom'))  return 'footer';
+  if (el.closest('footer'))          return 'footer';
+  if (el.closest('#hero'))           return 'hero';
+  if (el.closest('.mini-cta'))       return 'mini_cta';
+  if (el.closest('#contacto'))       return 'contacto';
+  if (el.closest('#mobile-menu'))    return 'menu_movil';
+  if (el.closest('nav'))             return 'nav';
+  if (el.closest('#productos'))      return 'productos';
+  return 'otro';
+}
+
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[href]');
+  if (!link || typeof gtag === 'undefined') return;
+
+  const href = link.href || '';
+
+  if (href.includes('puntia.app')) {
+    gtag('event', 'click_reserva', {
+      link_location: trackLocation(link),
+      link_text: link.textContent.trim()
+    });
+  }
+
+  if (href.includes('wa.me')) {
+    const productoNombre = link.closest('[data-producto]')
+      ? link.closest('[data-producto]').dataset.producto
+      : null;
+    gtag('event', 'click_whatsapp', {
+      link_location: trackLocation(link),
+      link_text: link.textContent.trim(),
+      ...(productoNombre && { producto: productoNombre })
+    });
+  }
+
+  if (href.includes('AlternativoStudio') || href.includes('alternativoStudio')) {
+    gtag('event', 'click_alternativo_studio', {
+      link_location: trackLocation(link)
+    });
+  }
+});
