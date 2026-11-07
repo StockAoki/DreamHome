@@ -5,6 +5,14 @@ Formato: `fecha — sección — descripción del cambio — solicitado por`
 
 ---
 
+## v2.6 — Equipo: nuevo orden y textos
+
+**2026-11-07**
+- Equipo — Nuevo orden de tarjetas: Paulino, Jose Alfredo, Fabiana y Carlos al final, para dar más relevancia al resto del equipo — Solicitado por: Steven
+- Equipo — Nuevos textos de especialidad para Paulino, Jose Alfredo, Fabiana y Carlos, con un tono más sobrio — Solicitado por: Steven
+
+---
+
 ## v2.5 — Analytics: tracking de eventos de clicks
 
 **2026-07-03**
